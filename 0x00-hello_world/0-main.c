@@ -7,5 +7,6 @@
  */
 int main(void)
 {
-    return (0);
+	printf("zoom zoom dance");
+	return (0);
 }
