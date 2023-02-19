@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	fprintf(stderr, "and that piece of art is useful\"- Dora Korpar, 2015-10-19\n");
-	/* return 1 means that there is some error while */
+	fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	/*return 1 main the programme failed to excute*/
 	return (1);
 }
