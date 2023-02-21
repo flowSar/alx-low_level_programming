@@ -11,11 +11,10 @@
 int main(void)
 {
 	char n [] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'e', 'f'};
-
-	for (int i = 0; i <= 15; i++)
-	{
+	int i = 0;
+	for (; ; i++)
 		putchar(n[i]);
-	}
+
 	putchar('\n');
 
 	return (0);
