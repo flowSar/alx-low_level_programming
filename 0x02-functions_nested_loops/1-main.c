@@ -1,7 +1,6 @@
-/**
- * print_alphabet - pritn phabet in lowercase
- *
- */
+#include <stdio.h>
+#include <unistd.h>
+
 
 void print_alphabet(void)
 {
