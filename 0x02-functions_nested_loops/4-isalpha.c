@@ -1,4 +1,5 @@
 #include <main.h>
+#include <ctype.h>
 /**
  * _isalpha - isalpha
  * @c: input
