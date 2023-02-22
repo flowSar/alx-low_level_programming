@@ -1,11 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
-/*
-*_abs: computes the absolute value of an integer x
-*@x: input
+/**
+* _abs -abs
+* @x: input
 *
-*Description:computes the absolute value of an integer x
-*Return: return the vaue of abs
+* Description: computes the absolute value of an integer x
+* Return: return the vaue of abs
 */
 int _abs(int x)
 {
