@@ -6,7 +6,7 @@
 *Description: check if c is uper or ot
 *Return: 1 if upper and 0 of not
 */
-int _isupper(int c)
+int _isupper(char c)
 {
 if (isupper(c))
 	return (1);
