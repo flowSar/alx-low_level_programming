@@ -10,5 +10,5 @@ int _isupper(char c)
 {
 if (isupper(c))
 	return (1);
-return (o);
+return (0);
 }
