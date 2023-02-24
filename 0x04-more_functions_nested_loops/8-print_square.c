@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_triangle - this function print square of # depends on arg
+ * print_square - this function print square of # depends on arg
  * @size: input
  *
  * Return: always 0
