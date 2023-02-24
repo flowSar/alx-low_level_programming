@@ -1,10 +1,10 @@
 #include <ctype.h>
 #include "main.h"
 /**
-*_isupper - isupper funvtion
+*_isdigit - isdigitr function
 *@c: input
-*Description: check if c is digit or ot
-*Return: 1 if upper and 0 of not
+*Description: check if c is digit or not 
+*Return: 1 if c is dit  and 0 if not
 */
 int _isdigit(int c)
 {
