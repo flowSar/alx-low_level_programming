@@ -16,6 +16,10 @@ int main(void)
 	while (i < 10)
 	{
 		putchar(i);
+		/**
+		 * you sould put increament of i her
+		 * sso the wile will stop at 9<10
+		 */
 	}
 	printf("Infinite loop avoided! \\o/\n");
 
