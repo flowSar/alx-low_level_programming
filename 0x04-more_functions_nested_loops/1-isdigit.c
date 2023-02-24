@@ -1,4 +1,4 @@
-i#include <ctype.h>
+#include <ctype.h>
 #include "main.h"
 /**
 *_isupper - isupper funvtion
