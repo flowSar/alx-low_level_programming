@@ -11,7 +11,7 @@ int main(void)
 	/**
 	 * this part is causing infinit loop 
 	 * because there's no increament on i so
-	 * so the loop qwon't stop
+	 * so the loop won't stop
 	 */ 
 	while (i < 10)
 	{
@@ -19,6 +19,7 @@ int main(void)
 		/**
 		 * you sould put increament of i her
 		 * sso the wile will stop at 9<10
+		 *
 		 */
 	}
 	printf("Infinite loop avoided! \\o/\n");
