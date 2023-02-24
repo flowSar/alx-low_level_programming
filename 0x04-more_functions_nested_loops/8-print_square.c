@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * print_triangle - this function print rectangle of # depends on arg
+ * print_triangle - this function print square of # depends on arg
  * @size: input
  *
  * Return: always 0
  */
-void print_triangle(int size)
+void print_square(int size)
 {
 	int i = 0;
 
