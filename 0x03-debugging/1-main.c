@@ -8,7 +8,11 @@ int main(void)
 	int i = 0;
 
 	printf("Infinite loop incoming :(\n");
-
+	/**
+	 * this part is causing infinit loop 
+	 * because there's no increament on i so
+	 * so the loop qwon't stop
+	 */ 
 	while (i < 10)
 	{
 		putchar(i);
