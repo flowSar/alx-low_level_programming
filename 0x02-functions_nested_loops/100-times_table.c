@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * print_times_table - function that prints the n times table, starting with 0.
- * @void: value
+ * times_table - function that prints the n times table, starting with 0.
+ * @n: value
  *
  * Return: 0 if running is success
  */
-void print_times_table(int n)
+void times_table(int n)
 {
 	int i, j;
 
@@ -18,31 +18,32 @@ void print_times_table(int n)
 			if (res < 10)
 			{
 				if (j != 0)
-					_putchar(' ');
-				_putchar(res % 10 + '0');
-				if (j != n)
 				{
-					_putchar(',');
+					_putchar(' ');
 					_putchar(' ');
 					_putchar(' ');
 				}
-			}else if (res >= 100)
-			{
-				_putchar(res / 100 + '0');
-				_putchar((res / 10 ) % 10 + '0');
 				_putchar(res % 10 + '0');
+				if (j != n)
+					_putchar(',');
+			}
+			else if (res >= 100)
+			{
+				_putchar(' ');
+				_putchar(res / 100 + '0');
+				_putchar((res / 10) % 10 + '0');
+				_putchar(res % 10 + '0');
+				if (j != n)
+					_putchar(',');
 			}
 			else
 			{
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(res / 10 + '0');
 				_putchar(res % 10 + '0');
 				if (j != n)
-				{
 					_putchar(',');
-					_putchar(' ');
-					if (res < 100)
-						_putchar(' ');
-				}
 			}
 		}
 		_putchar('\n');
