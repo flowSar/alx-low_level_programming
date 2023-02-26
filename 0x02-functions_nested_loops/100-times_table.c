@@ -40,7 +40,8 @@ void print_times_table(int n)
 				{
 					_putchar(',');
 					_putchar(' ');
-					_putchar(' ');
+					if (j < 100)
+						_putchar(' ');
 				}
 			}
 		}
