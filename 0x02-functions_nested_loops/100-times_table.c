@@ -36,6 +36,15 @@ void print_times_table(int n)
 				if (j != n)
 					_putchar(',');
 			}
+			else if (res >= 1000)
+			{
+				_putchar(res / 1000 + '0');
+				_putchar((res / 100) % 10 + '0');
+				_putchar((res / 10) % 10 + '0');
+				_putchar(res % 10 + '0');
+				if (j != n)
+					_putchar(',');
+			}
 			else
 			{
 				_putchar(' ');
