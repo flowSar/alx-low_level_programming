@@ -6,12 +6,12 @@
  */
 void print_most_numbers(void)
 {
-        char nm[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-        int i = 0;
-        while (i < 9)
-        {
-                _putchar(nm[i]);
-                i++;
-        }
-        _putchar('\n');
+	char numbers;
+
+	for (numbers = '0'; numbers <= '9'; numbers++)
+	{
+		if (numbers != '2' && numbers != '4')
+			_putchar(numbers);
+	}
+	_putchar('\n');
 }
