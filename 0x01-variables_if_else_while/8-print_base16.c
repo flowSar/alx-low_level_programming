@@ -10,11 +10,14 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	char n [] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
 	int i;
+	char ch;
 
-	for (i = 0; i <= 15; i++)
-		putchar(n[i]);
+	for (i = 0; i < 10; i++)
+		putchar(i % 10 + '0');
+
+	for (ch = 'a'; ch <= 'f'; ch++)
+		putchar(ch);
 
 	putchar('\n');
 
