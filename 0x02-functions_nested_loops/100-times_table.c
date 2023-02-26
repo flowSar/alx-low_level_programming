@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * times_table - function that prints the n times table, starting with 0.
+ * print_times_table - function that prints the n times table, starting with 0.
  * @n: value
  *
  * Return: 0 if running is success
  */
-void times_table(int n)
+void print_times_table(int n)
 {
 	int i, j;
 
