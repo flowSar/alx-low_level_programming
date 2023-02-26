@@ -12,9 +12,7 @@ if (c <= 9 && c >= 0)
 {
 	if (isalpha(c))
 		return (1);
-	else
-		return (0);
-}
-else
 	return (0);
+}
+
 }
