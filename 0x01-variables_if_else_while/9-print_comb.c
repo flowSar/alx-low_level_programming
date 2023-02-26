@@ -13,10 +13,10 @@ int main(void)
 
 	for (i = 0; i <= 9; i++)
 	{
-		_putchar(i / 10 + '0');
-		_putchar(',');
-		_putchar(' ');
+		putchar(i / 10 + '0');
+		putchar(',');
+		putchar(' ');
 	}
-	_putchar('\n');
+	putchar('\n');
 	return(0);
 }
