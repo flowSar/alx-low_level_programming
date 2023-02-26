@@ -9,9 +9,9 @@ void times_table(int n)
 {
 	int i, j;
 
-	for (i = 0; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
-		for (j = 0; j <= n; j++)
+		for (j = 0; j < n; j++)
 		{
 			int res = i * j;
 
@@ -24,7 +24,7 @@ void times_table(int n)
 					_putchar(' ');
 				}
 				_putchar(res % 10 + '0');
-				if (j != n)
+				if (j != n - 1)
 					_putchar(',');
 			}
 			else if (res >= 100)
@@ -33,7 +33,7 @@ void times_table(int n)
 				_putchar(res / 100 + '0');
 				_putchar((res / 10) % 10 + '0');
 				_putchar(res % 10 + '0');
-				if (j != n)
+				if (j != n - 1)
 					_putchar(',');
 			}
 			else
@@ -42,7 +42,7 @@ void times_table(int n)
 				_putchar(' ');
 				_putchar(res / 10 + '0');
 				_putchar(res % 10 + '0');
-				if (j != n)
+				if (j != n - 1)
 					_putchar(',');
 			}
 		}
