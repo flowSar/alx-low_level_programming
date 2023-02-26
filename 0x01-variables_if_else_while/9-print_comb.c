@@ -9,15 +9,14 @@
 
 int main(void)
 {
-	char x [] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 	int i;
 
 	for (i = 0; i <= 9; i++)
 	{
-		putchar(x[i]);
-		putchar(',');
-		putchar(' ');
+		_putchar(i / 10 + '0');
+		_putchar(',');
+		_putchar(' ');
 	}
-	putchar('\n');
+	_putchar('\n');
 	return(0);
 }
