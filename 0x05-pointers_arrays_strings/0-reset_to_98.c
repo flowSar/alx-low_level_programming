@@ -1,5 +1,4 @@
 #include "main.h"
-/* more headers goes there */
 /**
  * reset_to_98 - function change  the value of that pointer point to
  * @n: input
