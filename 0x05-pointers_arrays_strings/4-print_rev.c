@@ -1,5 +1,6 @@
 #include <string.h>
 #include "main.h"
+#include <stdio.h>
 /**
  * print_rev - sget length of a tring
  * @s : input
@@ -12,7 +13,7 @@ void print_rev(char *s)
 
 	for (i = strlen(s) - 1 ; i >= 0; i--)
 	{
-		_putchar(s[i]);
+		putchar(s[i]);
 	}
-	_putchar('\n');
+	putchar('\n');
 }
