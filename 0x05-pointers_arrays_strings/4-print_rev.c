@@ -6,9 +6,8 @@
  *
  * Return: the length ofstring
  */
-void 
-
 void print_rev(char *s)
 {
-
+	strrev(s);
+	return (s);
 }
