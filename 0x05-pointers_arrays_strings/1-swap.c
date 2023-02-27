@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * reset_to_98 - function change  the value of that pointer point to
  * @n: input
@@ -7,5 +8,7 @@
  */
 void swap_int(int *a, int *b)
 {
-    
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
 }
