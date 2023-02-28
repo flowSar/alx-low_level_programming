@@ -10,5 +10,5 @@ void reset_to_98(int *n)
 {
 	*n = 89;
 
-    fprintf(stderr, "%s\n", "[Anything]");
+    fprintf(stderr, "%s", "[Anything]");
 }
