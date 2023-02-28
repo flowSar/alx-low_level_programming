@@ -1,6 +1,8 @@
 #include <string.h>
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
 /**
  * _atoi - sget length of a tring
  * @s : input
@@ -9,7 +11,9 @@
  */
 int _atoi(char *s)
 {
-	atoi(s);
-
-	return (0);
+	int x = atoi(s);
+	if (isdigit(x))
+		return (x);
+	else
+		return (0);
 }
