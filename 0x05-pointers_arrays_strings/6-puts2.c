@@ -1,6 +1,6 @@
 #include <string.h>
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 /**
  * puts2 - sget length of a tring
  * @str : input
