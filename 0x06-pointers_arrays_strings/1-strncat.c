@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * _strcat - sget length of a tring
+ * _strncat - sget length of a tring
  * @dest : input
  * @src : input
  * @n : input
@@ -10,7 +10,7 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	strcat(dest, src);
+	strncat(dest, src, n);
 
 	return (dest);
 }
