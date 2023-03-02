@@ -2,9 +2,10 @@
 #include <string.h>
 /**
  * _strcat - sget length of a tring
- * @s : input
+ * @dest : input
+ * @src : input
  *
- * Return: the length ofstring
+ * Return: 0 if success
  */
 char *_strcat(char *dest, char *src)
 {
