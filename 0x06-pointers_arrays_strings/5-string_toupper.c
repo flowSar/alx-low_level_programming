@@ -7,5 +7,7 @@
  */
 char *string_toupper(char *)
 {
-	
+	char *p;
+
+	return(p);
 }
