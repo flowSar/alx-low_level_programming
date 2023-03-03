@@ -1,13 +1,29 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 /**
- * leet - sget length of a tring
+ * leet - a function that encodes a string into 1337.
+ * @str: string input
  *
- * Return: 0 if success
+ * Return: char*
  */
-char *leet(char *)
+char *leet(char *str)
 {
-	char *p;
+	int i, j;
 
-	return (p);
+	char *result = str;
+
+	char *s1 = "AaEeOoTtLl";
+	char *s2 = "4433007711";
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		for (j = 0; s1[j] != '\0'; j++)
+		{
+			if (str[i] == s1[j])
+			{
+				str[i] = s2[j];
+				break;
+			}
+		}
+	}
+	return (result);
 }
