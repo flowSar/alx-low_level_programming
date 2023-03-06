@@ -2,12 +2,12 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * _memset - sget length of a tring
+ * _memset -function that fills memory with a constant byte
  * @s : input
  * @b : input
  * @n : input
  *
- * Return: s if success
+ * Return: s pointer that filled with data
  */
 
 char *_memset(char *s, char b, unsigned int n)
