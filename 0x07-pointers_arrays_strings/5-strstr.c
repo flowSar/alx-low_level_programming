@@ -1,6 +1,5 @@
 #include <string.h>
 #include <stdio.h>
-#include <ctype.h>
 /**
  * _strstr - function revers string
  * @haystack : input
@@ -15,7 +14,9 @@ char *_strstr(char *haystack, char *needle)
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		if (haystack[i] == needle[0])
+        {
 			return (haystack + i);
+        }
 	}
 	return ('\0');
 }
