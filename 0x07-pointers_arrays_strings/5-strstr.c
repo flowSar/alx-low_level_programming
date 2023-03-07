@@ -30,8 +30,9 @@ char *_strstr(char *haystack, char *needle)
 			else
 				return ('\0');
 		}
-		return (haystack + p);
+		return (haystack + p-1);
 	}
 	else
 		return ('\0');
 }
+
