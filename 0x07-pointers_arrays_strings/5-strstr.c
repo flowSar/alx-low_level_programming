@@ -14,12 +14,14 @@ char *_strstr(char *haystack, char *needle)
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		if (haystack[i] == needle[0])
+		if (haystack[i] == needle[0] && haystack[i+1] == needle[1])
 		{
+			printf("%c == %c \n", haystack[i], needle[0]);
 			p = i;
 			break;
 		}
 	}
+	printf("p= %d\n", p);
 	if (p != -1)
 	{
 		i = 0;
