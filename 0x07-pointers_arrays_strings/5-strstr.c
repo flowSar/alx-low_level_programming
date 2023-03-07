@@ -28,10 +28,10 @@ char *_strstr(char *haystack, char *needle)
 			if (haystack[j] == needle[i])
 				i++;
 			else
-				return NULL;
+				return (NULL);
 		}
 		return (haystack + p);
 	}
 	else
-		return NULL;
+		return (NULL);
 }
