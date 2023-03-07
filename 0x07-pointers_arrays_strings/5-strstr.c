@@ -28,10 +28,20 @@ char *_strstr(char *haystack, char *needle)
 			if (haystack[j] == needle[i])
 				i++;
 			else
-				return ('\0');
+				return NULL;
 		}
 		return (haystack + p);
 	}
 	else
-		return ('\0');
+		return NULL;
+}
+int main(void)
+{
+    char *s = "First, solve the problem. Then, write the code.";
+    char *f = "";
+    char *t;
+
+    t = _strstr(s, f);
+    printf("%s\n", t);
+    return (0);
 }
