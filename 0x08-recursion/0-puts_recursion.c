@@ -7,12 +7,11 @@
 void _puts_recursion(char *s)
 {
 	printf("%c", *s);
-	s++;
 	if (*s == '\0')
 	{
 		printf("\n");
 		return;
 	}
 
-	_puts_recursion(s);
+	_puts_recursion((s + 1));
 }
