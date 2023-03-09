@@ -9,7 +9,7 @@
  */
 int _sqrt_recursion(int n)
 {	
-	int i , res;
+	int i , res, data[];
 	if (n%2!= 0 && n != 1)
 		return (-1);
 
@@ -17,7 +17,8 @@ int _sqrt_recursion(int n)
 		return 0;
 	res = n /2;
 	printf("res: %d\n", n);
-	i= 1 + _sqrt_recursion(res);
+	i= (1/2) + _sqrt_recursion(res);
+	data[i] = res;
 	return (i);
 }
 int main(void)
