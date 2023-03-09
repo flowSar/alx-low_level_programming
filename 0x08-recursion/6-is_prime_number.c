@@ -14,15 +14,11 @@ int do_prime(int n, int i)
 
 	if (n == i)
 		return (1);
-
 	res = n % i;
-	if (res != 0)
-	{
-		do_prime(n, i + 1);
-	}
-
-	else
+	if (res == 0)
 		return (0);
+	do_prime(n, i + 1);
+	return (1);
 
 }
 
