@@ -2,13 +2,12 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * _pow_recursion - function calculate factorial number.
- * @x : input
- * @y : input
+ * wildcmp - function calculate factorial number.
+ * @s1 : input
+ * @s2 : input
  *
  * Return: return -1 if n < 0 and if not retunr the factorial number,
  */
-//    r = wildcmp("main.c", "*.c");
 int wildcmp(char *s1, char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
