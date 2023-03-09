@@ -27,7 +27,7 @@ int do_prime(int n, int i)
 }
 
 /**
- * is_prime_number - function t check if a number is prime number.
+ * is_prime_number - function t check if a number is prime a number.
  * @n : input
  *
  * Return: return 1 if prime and 0 if not.
