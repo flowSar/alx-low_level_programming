@@ -13,6 +13,11 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 		result = result * strtol(argv[i], NULL, 10);
-	printf("%d\n", result);
-	return (0);
+	if (argc > 2)
+	{
+		printf("%d\n", result);
+		return (0);
+	}
+	printf("Error\n");
+	return (1);
 }
