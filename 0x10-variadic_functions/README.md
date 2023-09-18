@@ -1,0 +1,1 @@
+project about variadic function
