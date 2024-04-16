@@ -11,24 +11,24 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 
 	unsigned long int i;
-	hash_node_t **array, *node;
-	hash_table_t *hash;
+	hash_node_t **array;
+	hash_table_t *hash_table;
 
 	hash_table = malloc(sizeof(hash_table_t));
+	if (hash_table == NULL)
+		free(hash_table);
+
 	hash_table->size = size;
+
 	array = malloc(size * sizeof(hash_node_t *));
+	if (array == NULL)
+		free(array);
 
 	for (i = 0; i < size; i++)
 	{
-		node = malloc(sizeof(hash_node_t));
-		node->key = NULL;
-		node->value = NULL;
-		node->next = NULL;
-		array[i] = node;
+		array[i] = NULL;
 	}
 	hash_table->array = array;
-
-
 
 	return (hash_table);
 }
