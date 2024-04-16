@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_t - this function create a hash table
+ * hash_table_create - this function create a hash table
  * @size: size of the array
  *
  * Return: return the has table that was created
@@ -14,6 +14,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_node_t *node;
 
 	hash_table_t *hash_table = malloc(size * sizeof(hash_table_t));
+
 	hash_table->size = size;
 
 	for (i = 0; i < size; i++)
@@ -26,18 +27,3 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 	return (hash_table);
 }
-
-
-/**
- * main - check the code for
- *
- * Return: Always EXIT_SUCCESS.
- */
-int main(void)
-{
-    hash_table_t *ht;
-
-    ht = hash_table_create(1024);
-    printf("%p\n", (void *)ht);
-    return (EXIT_SUCCESS);
-} 
