@@ -1,20 +1,43 @@
 #include "hash_tables.h"
+
 /**
- * hash_djb2- crete hash table
+ * hash_table_t - this function create a hash table
+ * @size: size of the array
  *
- * str- first not
- * Return: return
+ * Return: return the has table that was created
  */
 
-unsigned long int hash_djb2(const unsigned char *str)
+hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned long int hash;
-	int c;
 
-	hash = 5381;
-	while ((c = *str++))
+	unsigned long int i;
+	hash_node_t *node;
+
+	hash_table_t *hash_table = malloc(size * sizeof(hash_table_t));
+	hash_table->size = size;
+
+	for (i = 0; i < size; i++)
 	{
-		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+		node = malloc(sizeof(hash_node_t));
+		node->key = 0;
+		node->value = 0;
+		node->next = NULL;
+		hash_table[i].array = &node;
 	}
-	return (hash);
+	return (hash_table);
 }
+
+
+/**
+ * main - check the code for
+ *
+ * Return: Always EXIT_SUCCESS.
+ */
+int main(void)
+{
+    hash_table_t *ht;
+
+    ht = hash_table_create(1024);
+    printf("%p\n", (void *)ht);
+    return (EXIT_SUCCESS);
+} 
