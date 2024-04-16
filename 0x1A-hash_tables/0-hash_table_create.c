@@ -1,4 +1,10 @@
 #include "hash_tables.h"
+/**
+ * hash_djb2- crete hash table
+ *
+ * str- first not
+ * Return: return
+ */
 
 unsigned long int hash_djb2(const unsigned char *str)
 {
