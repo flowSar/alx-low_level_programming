@@ -38,7 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		count += 1;
 		ht->count = count;
-		prev_node = ht->array[index]->next;
+		prev_node = ht->array[index];
 		ht->array[index] = node;
 		ht->array[index]->next = prev_node;
 	}
