@@ -19,7 +19,6 @@ typedef struct hash_node_s
 	char *key;
 	char *value;
 	struct hash_node_s *next;
-	int count;
 } hash_node_t;
 
 /**
@@ -34,6 +33,7 @@ typedef struct hash_table_s
 {
 	unsigned long int size;
 	hash_node_t **array;
+	int count;
 } hash_table_t;
 
 /*-------------hash yable function prototype---------------*/

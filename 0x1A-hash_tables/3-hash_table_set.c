@@ -30,7 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		ht->array[index] = node;
 		count += 1;
-		ht->array[index]->count = count;
+		ht->count = count;
 	}
 	else
 	{
@@ -38,7 +38,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = node;
 		ht->array[index]->next = prev_node;
 		count += 1;
-		ht->array[index]->count = count;
+		ht->count = count;
 	}
 
 	return (1);
