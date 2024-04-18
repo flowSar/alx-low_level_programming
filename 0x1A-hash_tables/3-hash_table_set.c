@@ -15,6 +15,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *prev_node;
 	unsigned long int index;
 
+	int count = 0;
+
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
 
@@ -27,12 +29,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = node;
+		count += 1;
+		ht->array[index]->count = count;
 	}
 	else
 	{
 		prev_node = ht->array[index]->next;
 		ht->array[index] = node;
 		ht->array[index]->next = prev_node;
+		count += 1;
+		ht->array[index]->count = count;
 	}
 
 	return (1);
