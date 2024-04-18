@@ -19,6 +19,7 @@ typedef struct hash_node_s
 	char *key;
 	char *value;
 	struct hash_node_s *next;
+	int count;
 } hash_node_t;
 
 /**
