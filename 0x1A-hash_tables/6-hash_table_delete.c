@@ -3,7 +3,6 @@
  * hash_table_delete - this functio delete a hash table
  * base on the kek_>index
  * @ht: hash table reference
- * @key: key elment
  *
  * Return: Return the found value or NULL if it isn't found.
  */
