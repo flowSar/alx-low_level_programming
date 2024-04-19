@@ -1,8 +1,9 @@
 
-#define TEST_ABS
-#ifndef TEST_ABS
 
-#define ABD(x) (x) * (x)
+#ifndef TEST_ABS
+#define TEST_ABS
+
+#define SUM(x, y) (x + y)
 
 
 #endif

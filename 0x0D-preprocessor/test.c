@@ -2,14 +2,14 @@
 
 #define ABS(x) ((x) < (-1) ? (-1) * (x) : (x))
 
+#define SUM(x, y) (x + y)
 
 int main(void)
 {
     int i;
     int j;
 
-    i = ABS(-98) * 10;
-    j = ABS(98) * 10;
-    printf("%d, %d\n", i, j);
+    int sum = SUM(31, 7);
+    printf("%d\n", sum);
     return (0);
 }
