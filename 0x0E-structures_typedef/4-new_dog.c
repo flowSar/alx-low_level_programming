@@ -17,10 +17,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t dog;
 	dog_t *new_dog = &dog;
 
-	char *n_name = malloc(get_length(name));
-	char *n_owner = malloc(get_length(owner));
+	new_dog->name = malloc(get_length(name) + 1);
+	new_dog->owner = malloc(get_length(owner) + 1);
 
-	if (n_name == NULL || n_owner == NULL)
+	if (new_dog->name == NULL || new_dog->owner == NULL)
 		return (NULL);
 
 	if (name == NULL || owner == NULL)
@@ -30,8 +30,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	new_dog->name = n_name;
-	new_dog->owner = n_owner;
+	strcpy(new_dog->name, name);
+	strcpy(new_dog->owner, owner);
 	new_dog->age = age;
 
 	return (new_dog);
