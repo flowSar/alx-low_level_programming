@@ -14,6 +14,8 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
+		if argv[i] 
+
 		result = result + strtol(argv[i], NULL, 10);
 	}
 
@@ -30,4 +32,10 @@ int main(int argc, char *argv[])
 
 	printf("Error\n");
 	return (1);
+}
+
+
+int is_string(char *str)
+{
+	for (int i = 0; str[i] != '\0'; i++)
 }
