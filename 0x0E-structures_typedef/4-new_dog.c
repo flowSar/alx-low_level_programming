@@ -17,14 +17,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	dog_t *new_dog = malloc(sizeof(dog_t));
 
-	if (new_dog == NULL)
-		return (NULL);
-
 	new_dog->name = malloc(get_length(name) + 1);
 	new_dog->owner = malloc(get_length(owner) + 1);
 
-	if (new_dog->name == NULL || new_dog->owner == NULL)
+	if (new_dog->name == NULL || new_dog->owner == NULL || new_dog == NULL)
+	{
+		free(new_dog->name);
+		free(new_dog->owner);
+		free(new_dog);
 		return (NULL);
+	}
 
 	if (name == NULL || owner == NULL)
 	{
