@@ -10,5 +10,7 @@ void free_dog(dog_t *d)
 {
 	dog_t *dog = (dog_t *)malloc(sizeof(d));
 
+	free(dog->name)
+	free(dog->owner)
 	free(dog);
 }
