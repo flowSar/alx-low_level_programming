@@ -1,0 +1,14 @@
+
+all: school
+
+school: school.o main.o
+	gcc -o school school.o main.o
+
+school.o: school.c
+	gcc -c school.c
+main.o: main.c
+	gcc -c main.c
+	
+clean:
+	rm -f school school.o main.o
+
