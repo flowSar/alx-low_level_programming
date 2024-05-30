@@ -35,6 +35,8 @@ def island_perimeter(grid):
                 island += [k]
         k = 0
 
+    if len(island) == 1:
+        return 4;
     i = 0
     first = 0
     last = len(island) - 1
