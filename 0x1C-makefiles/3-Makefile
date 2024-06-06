@@ -15,10 +15,10 @@ $(NAME): $(OBJ)
 clean:
 	$(RM) *~
 	$(RM) *.swp
-	$(RM) $(OBJ)
+	$(RM) $(NAME)
 
 oclean:
-	$(RM) $(NAME)
+	$(RM) $(OBJ)
 
 fclean: clean oclean
 
