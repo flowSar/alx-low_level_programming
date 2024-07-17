@@ -14,7 +14,7 @@ int binary_search(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-	index = binary_search_handler(array, value, 0, size);
+	index = binary_search_handler(array, value, 0, size - 1);
 
 	return (index);
 }
@@ -37,10 +37,14 @@ int binary_search_handler(int *array, int value,  int f, int l)
 	if (f > l)
 		return (-1);
 
+	if (f == l)
+	{
+		if (array[f] == value)
+			return (f);
+		return (-1);
+	}
 	if (value == array[middle])
 		return (middle);
-	if (f == l)
-		return (-1);
 	if (array[middle] > value)
 		return (binary_search_handler(array, value, f, middle - 1));
 	else
@@ -57,17 +61,12 @@ void searching_in_array(int *array, int f, int l)
 {
 	int i;
 
-	if (f < l)
+	printf("Searching in array: ");
+	for (i = f; i <= l; i++)
 	{
-		printf("Searching in array: ");
-		for (i = f; i < l; i++)
-		{
-			printf("%i", array[i]);
-			if (i != l - 1)
-				printf(",");
-		}
-		printf("\n");
+		printf("%i", array[i]);
+		if (i != l)
+			printf(",");
 	}
-
-
+	printf("\n");
 }
