@@ -35,6 +35,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 					return (start);
 				start = start->next;
 			}
+			return (NULL);
 		}
 		else
 		{
