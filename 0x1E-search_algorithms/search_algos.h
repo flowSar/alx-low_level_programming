@@ -43,6 +43,8 @@ int binary_search_handler(int *array, int value,  int f, int l);
 void searching_in_array(int *array, int f, int l);
 
 int jump_search(int *array, size_t size, int value);
+int compare(int *array, int index, int end, int value);
+
 int interpolation_search(int *array, size_t size, int value);
 
 listint_t *jump_list(listint_t *list, size_t size, int value);
