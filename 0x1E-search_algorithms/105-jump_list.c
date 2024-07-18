@@ -27,23 +27,20 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		if (end->n >= value)
 		{
 			printf("Value found between indexes [%li] and [%li]",
-				   start->index, end->index);
-			while (start)
-			{
-				printf("Value checked at index [%li] = [%i]", start->index, start->n);
-				if (start->n == value)
-					return (start);
-				start = start->next;
-			}
-			return (NULL);
+					start->index, end->index);
+			return (compare(start, end, value));
 		}
 		else
 		{
 			start = get_node_index(list, jump_steps);
 			jump_steps += jump_steps;
 			end = get_node_index(list, jump_steps);
-			if (start->next == NULL)
-				return (NULL);
+			if (end->next == NULL)
+			{
+				printf("Value found between indexes [%li] and [%li]",
+					start->index, end->index);
+				return (compare(start, end, value));
+			}
 		}
 	}
 	return (NULL);
@@ -71,4 +68,24 @@ listint_t *get_node_index(listint_t *list, size_t index)
 		head = head->next;
 	}
 	return (prev);
+}
+/**
+ * compare - compare
+ *
+ * @start: first node
+ * @end: last node
+ * @value: value that we're looking for
+ *
+ * Return: return nodeif it was found at index or last node if wasn't found
+ */
+listint_t *compare(listint_t *start, listint_t *end, int value)
+{
+	while (start)
+	{
+		printf("Value checked at index [%li] = [%i]", start->index, start->n);
+		if (start->n == value)
+			return (start);
+		start = start->next;
+	}
+	return (NULL);
 }
