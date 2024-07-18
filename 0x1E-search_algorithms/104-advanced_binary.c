@@ -14,8 +14,10 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (array == NULL)
 		return (-1);
-    if (array[0] == value)
-        return (0);
+	if (array[0] == value)
+	{
+		return (0);
+	}
 	index = binary_search_handler(array, value, 0, size - 1);
 
 	return (index);
