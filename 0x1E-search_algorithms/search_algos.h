@@ -55,4 +55,6 @@ skiplist_t *linear_skip(skiplist_t *list, int value);
 skiplist_t *start_comparing(skiplist_t *start, skiplist_t *jump_pointer, int value);
 skiplist_t *get_last_node(skiplist_t *start);
 
+int advanced_binary(int *array, size_t size, int value);
+
 #endif
