@@ -19,7 +19,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	if (list == NULL)
 		return (NULL);
 
-	while (end != start)
+	while (jump_steps <= size)
 	{
 		printf("Value checked at index [%li] = [%i]", start->index, start->n);
 		if (start->n == value)
