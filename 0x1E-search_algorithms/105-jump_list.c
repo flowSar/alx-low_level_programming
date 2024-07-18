@@ -59,7 +59,7 @@ listint_t *get_node_index(listint_t *list, size_t index)
 	listint_t *prev = NULL;
 
 	if (index)
-		return (NULL);
+		return (list);
 	while (head)
 	{
 		if (head->index == index)
@@ -70,7 +70,7 @@ listint_t *get_node_index(listint_t *list, size_t index)
 	return (prev);
 }
 /**
- * compare - compare
+ * traverse_and_compare - compare
  *
  * @start: first node
  * @end: last node
