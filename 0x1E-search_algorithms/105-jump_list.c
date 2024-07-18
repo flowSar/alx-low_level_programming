@@ -12,37 +12,34 @@
 
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	size_t jump_steps = sqrt(size);
-	listint_t *start = get_node_index(list, 0);
+	size_t jump_steps = sqrt(size), i = 0;
+	size_t step = jump_steps;
+	listint_t *start = get_node_index(list, i);
 	listint_t *end = get_node_index(list, jump_steps);
 
 	if (list == NULL)
 		return (NULL);
 
-	while (jump_steps <= size)
+	while (i <= size)
 	{
-		printf("Value checked at index [%li] = [%i]", start->index, start->n);
+		printf("Value checked at index [%li] = [%i]\n", end->index, end->n);
 		if (start->n == value)
 			return (start);
 		if (end->n >= value)
 		{
-			printf("Value found between indexes [%li] and [%li]",
-					start->index, end->index);
 			return (traverse_and_compare(start, end, value));
 		}
 		else
 		{
-			start = get_node_index(list, jump_steps);
-			jump_steps += jump_steps;
-			end = get_node_index(list, jump_steps);
+			i = step;
+			step += jump_steps;
+			start = get_node_index(list, i);
+			end = get_node_index(list, step);
 			if (end->next == NULL)
 			{
-				printf("Value found between indexes [%li] and [%li]",
-					start->index, end->index);
 				return (traverse_and_compare(start, end, value));
 			}
 		}
-	
 	}
 	return (NULL);
 }
@@ -59,7 +56,7 @@ listint_t *get_node_index(listint_t *list, size_t index)
 	listint_t *head = list;
 	listint_t *prev = NULL;
 
-	if (index)
+	if (index == 0)
 		return (list);
 	while (head)
 	{
@@ -81,9 +78,11 @@ listint_t *get_node_index(listint_t *list, size_t index)
  */
 listint_t *traverse_and_compare(listint_t *start, listint_t *end, int value)
 {
+	printf("Value found between indexes [%li] and [%li]\n",
+		   start->index, end->index);
 	while (start)
 	{
-		printf("Value checked at index [%li] = [%i]", start->index, start->n);
+		printf("Value checked at index [%li] = [%i]\n", start->index, start->n);
 		if (start->n == value)
 			return (start);
 		start = start->next;
