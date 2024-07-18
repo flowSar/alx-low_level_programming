@@ -53,5 +53,6 @@ listint_t *traverse_and_compare(listint_t *start, listint_t *end, int value);
 
 skiplist_t *linear_skip(skiplist_t *list, int value);
 skiplist_t *start_comparing(skiplist_t *start, skiplist_t *jump_pointer, int value);
+skiplist_t *get_last_node(skiplist_t *start);
 
 #endif

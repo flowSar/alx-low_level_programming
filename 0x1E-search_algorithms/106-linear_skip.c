@@ -8,7 +8,6 @@
  *
  * Return: return NULL if the value not found or value node if was found.
  */
-
 skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *jump_pointer;
@@ -17,10 +16,11 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	if (list == NULL)
 		return (NULL);
 
-    jump_pointer = list->express;
-	while (jump_pointer != start)
+	jump_pointer = list->express;
+	while (jump_pointer)
 	{
-		printf("Value checked at index [%li] = [%i]", start->index, start->n);
+		printf("Value checked at index [%li] = [%i]\n",
+			   jump_pointer->index, jump_pointer->n);
 		if (start->n == value)
 			return (start);
 		if (jump_pointer->n >= value)
@@ -32,9 +32,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 			start = jump_pointer;
 			jump_pointer = jump_pointer->express;
 			if (jump_pointer == NULL)
-			{
-				return (start_comparing(start, jump_pointer, value));
-			}
+				return (start_comparing(start, get_last_node(start), value));
 		}
 	}
 	return (NULL);
@@ -51,14 +49,29 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 skiplist_t *start_comparing(skiplist_t *start,
 							skiplist_t *jump_pointer, int value)
 {
-	printf("Value found between indexes [%li] and [%li]",
+	printf("Value found between indexes [%li] and [%li]\n",
 			start->index, jump_pointer->index);
 	while (start)
 	{
-		printf("Value checked at index [%li] = [%i]", start->index, start->n);
+		printf("Value checked at index [%li] = [%i]\n", start->index, start->n);
 		if (start->n == value)
 			return (start);
 		start = start->next;
 	}
 	return (NULL);
+}
+/**
+ * get_last_node - I use this functio to get last node when express == NULL
+ *
+ * @start: start node or prev express, jump_pointer
+ *
+ * Return: last node.
+ */
+skiplist_t *get_last_node(skiplist_t *start)
+{
+	while (start->next)
+	{
+		start = start->next;
+	}
+	return (start);
 }

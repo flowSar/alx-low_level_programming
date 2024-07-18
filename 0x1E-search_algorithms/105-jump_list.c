@@ -42,6 +42,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 				return (traverse_and_compare(start, end, value));
 			}
 		}
+	
 	}
 	return (NULL);
 }
