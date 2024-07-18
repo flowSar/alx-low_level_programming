@@ -66,7 +66,7 @@ void searching_in_array(int *array, int f, int l)
 	{
 		printf("%i", array[i]);
 		if (i != l)
-			printf(",");
+			printf(", ");
 	}
 	printf("\n");
 }
