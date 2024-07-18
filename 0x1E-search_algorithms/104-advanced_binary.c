@@ -48,7 +48,11 @@ int binary_search_handler(int *array, int value,  int f, int l)
 		return (-1);
 	}
 	if (value == array[middle])
+	{
+		if (middle != 0 && array[middle - 1] == value)
+			return (binary_search_handler(array, value, f, middle - 1));
 		return (middle);
+	}
 	if (array[middle] > value)
 		return (binary_search_handler(array, value, f, middle - 1));
 	else
