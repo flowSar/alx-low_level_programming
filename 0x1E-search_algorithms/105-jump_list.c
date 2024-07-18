@@ -28,7 +28,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		{
 			printf("Value found between indexes [%li] and [%li]",
 					start->index, end->index);
-			return (compare(start, end, value));
+			return (traverse_and_compare(start, end, value));
 		}
 		else
 		{
@@ -39,7 +39,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 			{
 				printf("Value found between indexes [%li] and [%li]",
 					start->index, end->index);
-				return (compare(start, end, value));
+				return (traverse_and_compare(start, end, value));
 			}
 		}
 	}
@@ -78,7 +78,7 @@ listint_t *get_node_index(listint_t *list, size_t index)
  *
  * Return: return nodeif it was found at index or last node if wasn't found
  */
-listint_t *compare(listint_t *start, listint_t *end, int value)
+listint_t *traverse_and_compare(listint_t *start, listint_t *end, int value)
 {
 	while (start)
 	{

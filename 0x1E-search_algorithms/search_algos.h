@@ -49,7 +49,7 @@ int interpolation_search(int *array, size_t size, int value);
 
 listint_t *jump_list(listint_t *list, size_t size, int value);
 listint_t *get_node_index(listint_t *list, size_t index);
-listint_t *compare(listint_t *start, listint_t *end, int value);
+listint_t *traverse_and_compare(listint_t *start, listint_t *end, int value);
 
 skiplist_t *linear_skip(skiplist_t *list, int value);
 skiplist_t *start_comparing(skiplist_t *start, skiplist_t *jump_pointer, int value);
